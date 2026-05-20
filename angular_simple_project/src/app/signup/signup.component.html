@@ -1,0 +1,49 @@
+<div align="center">
+
+    <h1>User Registration</h1>
+
+    <form (submit)="signUp()">
+
+        <table>
+
+            <tr>
+                <th>First Name:</th>
+                <td><input type="text" name="firstName" [(ngModel)]="form.data.firstName"
+                        placeholder="Enter First Name"></td>
+            </tr>
+            <tr>
+                <th>Last Name:</th>
+                <td><input type="text" name="lastName" [(ngModel)]="form.data.lastName" placeholder= "Enter Last Name">
+                </td>
+            </tr>
+            <tr>
+                <th>LoginId:</th>
+                <td><input type="text" name="loginId" [(ngModel)]="form.data.loginId" placeholder="Enter Login ID"></td>
+            </tr>
+            <tr>
+                <th>Password:</th>
+                <td><input type="password" name="password" [(ngModel)]="form.data.password"
+                        placeholder="Enter Password"></td>
+            </tr>
+            <tr>
+                <th>DOB:</th>
+                <td><input type="date" name="dob" [(ngModel)]="form.data.dob" placeholder="Enter Date of Birth"
+                        style="width: 98%;"></td>
+            </tr>
+            <tr>
+                <th>Address:</th>
+                <td><input type="text" name="address" [(ngModel)]="form.data.address" placeholder="Enter Address"></td>
+            </tr>
+            <tr>
+                <th></th>
+             <td style="text-align: center;">
+                     <input type="submit" value="SignUp">
+                     
+                     <input type="submit" value="Reset">
+</td>
+            </tr>
+        </table>
+
+    </form>
+</div>
+

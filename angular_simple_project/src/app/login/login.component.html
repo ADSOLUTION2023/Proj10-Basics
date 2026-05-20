@@ -1,0 +1,26 @@
+<div align="center">
+
+    <h1>User Login</h1>
+
+    <form (submit)="login()" ;>
+
+        <table>
+
+            <tr>
+                <th>LoginId:</th>
+                <td><input type="text" name="loginId" [(ngModel)]="form.data.loginId" placeholder="Enter Login ID"></td>
+            </tr>
+            <tr>
+                <th>Password:</th>
+                <td><input type="password" name="password" [(ngModel)]="form.data.password"
+                        placeholder="Enter Password"></td>
+            </tr>
+            <tr>
+                <th></th>
+                <td style="text-align: center;">
+                    <input type="submit" value="Sign In">
+                </td>
+            </tr>
+        </table>
+
+    </form>

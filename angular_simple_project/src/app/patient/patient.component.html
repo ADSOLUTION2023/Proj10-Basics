@@ -1,0 +1,39 @@
+<div align="center">
+
+    <h1>Patient Registration</h1>
+
+    <form (submit)="patient()">
+
+        <table>
+
+            <tr>
+                <th>Patient Name:</th>
+                <td><input type="text" name="patient" [(ngModel)]="form.data.patient"
+                        placeholder="Enter Patient Name"></td>
+            </tr>
+           
+            <tr>
+                <th>PatientId:</th>
+                <td><input type="text" name="patientId" [(ngModel)]="form.data.loginId" placeholder="Enter Patient ID"></td>
+            </tr>
+           
+            <tr>
+                <th>DOB:</th>
+                <td><input type="date" name="dob" [(ngModel)]="form.data.dob" placeholder="Enter Date of Birth"
+                        style="width: 98%;"></td>
+            </tr>
+            <tr>
+                <th>Address:</th>
+                <td><input type="text" name="address" [(ngModel)]="form.data.address" placeholder="Enter Address"></td>
+            </tr>
+            <tr>
+                <th></th>
+             <td style="text-align: center;">
+                     <input type="submit" value="Register">
+</td>
+            </tr>
+        </table>
+
+    </form>
+</div>
+

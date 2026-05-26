@@ -11,6 +11,8 @@ import { FooterComponent } from './footer/footer.component';
 import { FormsModule } from '@angular/forms';
 import { PatientComponent } from './patient/patient.component';
 import { HttpClientModule } from '@angular/common/http';
+import { UserComponent } from './user/user.component';
+import { UserListComponent } from './user/user-list.component';
 
 @NgModule({
   declarations: [
@@ -21,6 +23,8 @@ import { HttpClientModule } from '@angular/common/http';
     SignupComponent,
     FooterComponent,
     PatientComponent,
+    UserComponent,
+    UserListComponent,
   ],
   imports: [
     BrowserModule,

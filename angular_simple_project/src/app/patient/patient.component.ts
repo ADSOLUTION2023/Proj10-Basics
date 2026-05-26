@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { HttpserviceService } from '../httpservice.service';
+import { HttpServiceService } from '../httpservice.service';
 
 @Component({
   selector: 'app-patient',
@@ -8,16 +8,16 @@ import { HttpserviceService } from '../httpservice.service';
 })
 export class PatientComponent {
   
-  endpoint: any = "http://localhost:8080/Auth/signup"
+  endpoint: any = "http://localhost:8081/Auth/signup"
 
-  constructor(public httpservice: HttpserviceService) { }
+  constructor(public httpService: HttpServiceService) { }
 
   form: any = {
     data: {}
   }
 
   patient() {
-    this.httpservice.post(this.endpoint, this.form.data, (response: any) => {
+    this.httpService.post(this.endpoint, this.form.data, (response: any) => {
       console.log('response === >', response);
     });
 

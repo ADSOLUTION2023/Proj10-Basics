@@ -34,14 +34,20 @@ public class LoginCtl extends BaseCtl {
 		}
 
 		UserDTO dto = (UserDTO) form.getDto();
-
-		long pk = userService.add(dto);
-		res.addData(dto);
-		res.addMessage("User Register successfully");
-		res.setSuccess(true);
+		
+		try {
+			long pk = userService.add(dto);
+			res.addData(dto);
+			res.addMessage("User added Successfully..!!");
+			res.setSuccess(true);
+		} catch (RuntimeException e) {
+			res.addMessage("Login Id already Exist");
+			res.setSuccess(false);
+		}
 
 		return res;
 	}
+	
 
 	@PostMapping("/login")
 	public ORSResponse login(@RequestBody @Valid LoginForm form, BindingResult bindingResult, HttpSession session) {
@@ -63,6 +69,7 @@ public class LoginCtl extends BaseCtl {
 		if (dto != null) {
 			session.setAttribute("user", dto);
 			res.addData(dto);
+			res.addMessage("User Logged In Succesfully");
 			res.setSuccess(true);
 		} else {
 			res.addMessage("Invalid Login or Password");

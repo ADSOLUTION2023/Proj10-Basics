@@ -25,7 +25,7 @@ public class UserService {
 		UserDTO existDto = userDao.findByUniqueKey("loginId", dto.getLoginId());
 
 		if (existDto != null) {
-			throw new RuntimeException("Login lready exist");
+			throw new RuntimeException("Login Already Exist");
 		}
 
 		long pk = userDao.add(dto);

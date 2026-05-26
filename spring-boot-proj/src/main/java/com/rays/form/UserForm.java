@@ -6,17 +6,17 @@ import com.rays.common.BaseForm;
 
 public class UserForm extends BaseForm{
 	
-	@NotEmpty(message = "First Name is required")
+	@NotEmpty(message = "First Name is Required")
 	private String firstName;
-	@NotEmpty(message = "Last Name is required")
+	@NotEmpty(message = "Last Name is Required")
 	private String lastName;
-	@NotEmpty(message = "Login Id is required")
+	@NotEmpty(message = "Login Id is Required")
 	private String loginId;
-	@NotEmpty(message = "Password is required")
+	@NotEmpty(message = "Password is Required")
 	private String password;
-	@NotEmpty(message = "Roll Id is required")
+	@NotEmpty(message = "Roll Id is Required")
 	private Long roleId;
-	@NotEmpty(message = "Role Name is required")
+	@NotEmpty(message = "Role Name is Required")
 	private String roleName;
 	private String imageId;
 	

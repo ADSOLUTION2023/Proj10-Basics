@@ -4,17 +4,20 @@ import { HttpClient } from '@angular/common/http';
 @Injectable({
   providedIn: 'root'
 })
-export class HttpserviceService {
+export class HttpServiceService {
 
   constructor(public httpClient: HttpClient) { }
+
   post(endpoint: any, formData: any, callback: any) {
-     this.httpClient.post(endpoint, formData).subscribe((response: any) => {
-      callback(response); 
+    this.httpClient.post(endpoint, formData).subscribe((response: any) => {
+      callback(response); // return response as a callback function parameter
     });
   }
-   get(endpoint: any, callback: any) {
+
+  get(endpoint: any, callback: any) {
     this.httpClient.get(endpoint).subscribe((response: any) => {
-      callback(response); 
+      callback(response); // return response as a collback function parameter
     });
-   }
+  }
+
 }
